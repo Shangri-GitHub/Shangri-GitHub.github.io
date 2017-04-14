@@ -158,7 +158,15 @@
     <entry>
       <title><![CDATA[我的相册]]></title>
       <url>/2017/04/10/photo/</url>
-      <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo <span class="keyword">new</span> <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+      <content type="html"><![CDATA[<blockquote>
+<p>蜡笔小新</p>
+</blockquote>
+<p><img src="/assets/img/myself.jpg" alt="蜡笔小新"></p>
+<hr>
+<blockquote>
+<p>东坝秦门饭店留影（刘飘）-2017.03.04</p>
+</blockquote>
+<p><img src="/assets/img/东坝秦门饭店.jpeg" alt=""></p>
 ]]></content>
       
         
