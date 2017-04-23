@@ -489,7 +489,7 @@
     </entry>
     
     <entry>
-      <title><![CDATA[刘飘]]></title>
+      <title><![CDATA[markdown用法]]></title>
       <url>/2017/04/11/test/</url>
       <content type="html"><![CDATA[<h4 id="插入链接"><a href="#插入链接" class="headerlink" title="插入链接"></a>插入链接</h4><p><a href="http://www.baidu.com" target="_blank" rel="external">百度</a></p>
 <h4 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h4><p><img src="http://note.youdao.com/fgvicon.ico" alt="有道云笔记"></p>
@@ -544,7 +544,7 @@
         
         <tags>
             
-            <tag> 老&amp;nbsp;婆 </tag>
+            <tag> tips </tag>
             
         </tags>
         
