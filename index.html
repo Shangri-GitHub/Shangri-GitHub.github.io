@@ -285,6 +285,61 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-人防大数据平台" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/04/24/人防大数据平台/" class="article-date">
+      <time datetime="2017-04-24T10:06:28.000Z" itemprop="datePublished">2017-04-24</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/24/人防大数据平台/">人防大数据平台</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h5 id="拦截器"><a href="#拦截器" class="headerlink" title="拦截器"></a>拦截器</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div></pre></td><td class="code"><pre><div class="line">angular.module(&apos;datatower.services&apos;, [])</div><div class="line">    .factory(&apos;HttpInterceptor&apos;, function ($q) &#123;</div><div class="line">        var interceptor = &#123;</div><div class="line">    		&apos;request&apos;: function(config) &#123;</div><div class="line">    			if(config.method==&apos;POST&apos;)&#123;</div><div class="line">    				var encodedData = &apos;_=1&apos;;</div><div class="line">        			for(var param in config.data)&#123;</div><div class="line">        				var value = config.data[param];</div><div class="line">        				if(value!=undefined)&#123;</div><div class="line">        					encodedData += &quot;&amp;&quot;+param + &quot;=&quot; +value;</div><div class="line">        				&#125;</div><div class="line">        			&#125;</div><div class="line">                    config.data = encodedData;</div><div class="line">                    config.headers = config.headers||&#123;&#125;;</div><div class="line">                    config.headers[&apos;Content-Type&apos;] = &apos;application/x-www-form-urlencoded;charset=utf-8&apos;;</div><div class="line">    			&#125;</div><div class="line">                return config;</div><div class="line">            &#125;,	</div><div class="line">            &apos;response&apos;: function (response) &#123;</div><div class="line">                // console.log(response);</div><div class="line">                if (response.data.respCode == &apos;000001&apos;) &#123;</div><div class="line">                    var d = dialog(&#123;</div><div class="line">                        content: &apos;无效用户&apos;</div><div class="line">                    &#125;);</div><div class="line">                    d.show();</div><div class="line">                    setTimeout(function () &#123;</div><div class="line">                        d.close().remove();</div><div class="line">                    &#125;, 2000);</div><div class="line">                &#125; else if (response.data.respCode == &apos;000002&apos;) &#123;</div><div class="line">                    var d = dialog(&#123;</div><div class="line">                        content: &apos;没有数据访问权限&apos;</div><div class="line">                    &#125;);</div><div class="line">                    d.show();</div><div class="line">                    setTimeout(function () &#123;</div><div class="line">                        d.close().remove();</div><div class="line">                    &#125;, 2000);</div><div class="line">                &#125; else if (response.data.respCode == &apos;000003&apos;) &#123;</div><div class="line">                    var d = dialog(&#123;</div><div class="line">                        content: &apos;数字签名不合法&apos;</div><div class="line">                    &#125;);</div><div class="line">                    d.show();</div><div class="line">                    setTimeout(function () &#123;</div><div class="line">                        d.close().remove();</div><div class="line">                    &#125;, 2000);</div><div class="line">                &#125; else if (response.data.respCode == &apos;000005&apos;) &#123;</div><div class="line">                    var d = dialog(&#123;</div><div class="line">                        content: &apos;无效的参数&apos;</div><div class="line">                    &#125;);</div><div class="line">                    d.show();</div><div class="line">                    setTimeout(function () &#123;</div><div class="line">                        d.close().remove();</div><div class="line">                    &#125;, 2000);</div><div class="line">                &#125; else if (response.data.respCode == &apos;000006&apos;) &#123;</div><div class="line">                    var d = dialog(&#123;</div><div class="line">                        content: &apos;接口异常&apos;</div><div class="line">                    &#125;);</div><div class="line">                    d.show();</div><div class="line">                    setTimeout(function () &#123;</div><div class="line">                        d.close().remove();</div><div class="line">                    &#125;, 2000);</div><div class="line">                &#125;;</div><div class="line">                return response</div><div class="line">            &#125;,</div><div class="line">            &apos;responseError&apos;: function (err) &#123;</div><div class="line">                // console.log(err);</div><div class="line">                if (-1 === err.status) &#123;</div><div class="line">                    var d = dialog(&#123;</div><div class="line">                        content: &apos;请检查连接网络&apos;</div><div class="line">                    &#125;);</div><div class="line">                    d.show();</div><div class="line">                    setTimeout(function () &#123;</div><div class="line">                        d.close().remove();</div><div class="line">                    &#125;, 2000);</div><div class="line">                &#125;</div><div class="line">                return $q.reject(err);</div><div class="line">            &#125;</div><div class="line">        &#125;;</div><div class="line">        return interceptor;</div><div class="line">    &#125;)</div></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-js一些技巧" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
