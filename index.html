@@ -285,6 +285,119 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-vim-命令详解" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/05/12/vim-命令详解/" class="article-date">
+      <time datetime="2017-05-12T09:30:32.000Z" itemprop="datePublished">2017-05-12</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/12/vim-命令详解/">vim 命令详解</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <blockquote>
+<p>vim 命令详解</p>
+<h4 id="一、模式切换"><a href="#一、模式切换" class="headerlink" title="一、模式切换"></a>一、模式切换</h4><p>#####编辑–&gt;输入：</p>
+</blockquote>
+<pre><code>i: 在当前光标所在字符的前面，转为输入模式；
+
+a: 在当前光标所在字符的后面，转为输入模式；
+
+o: 在当前光标所在行的下方，新建一行，并转为输入模式；
+
+I：在当前光标所在行的行首，转换为输入模式
+
+A：在当前光标所在行的行尾，转换为输入模式
+
+O：在当前光标所在行的上方，新建一行，并转为输入模式；
+</code></pre><p>输入–&gt;编辑：</p>
+<pre><code>ESC
+</code></pre><p>编辑–&gt;末行：</p>
+<pre><code>:
+</code></pre><p>末行–&gt;编辑：</p>
+<pre><code>ESC, ESC
+</code></pre><p>####二、关闭文件</p>
+<p>#####1、末行模式关闭文件</p>
+<pre><code>:q  退出
+
+:wq 保存并退出
+
+:q! 不保存并退出
+
+:w 保存
+
+:w! 强行保存
+
+:wq --&gt; :x
+</code></pre><p>#####2、编辑模式下退出</p>
+<p>ZZ: </p>
+<h4 id="三、移动光标-编辑模式"><a href="#三、移动光标-编辑模式" class="headerlink" title="三、移动光标(编辑模式)"></a>三、移动光标(编辑模式)</h4><h5 id="1、逐字符移动："><a href="#1、逐字符移动：" class="headerlink" title="1、逐字符移动："></a>1、逐字符移动：</h5><pre><code>h: 左
+
+l: 右
+
+j: 下
+
+k: 上
+
+#h: 移动#个字符
+</code></pre><h5 id="2、行间跳转"><a href="#2、行间跳转" class="headerlink" title="2、行间跳转"></a>2、行间跳转</h5><pre><code>#G：跳转至第#行
+
+gg: 第一行
+
+G：最后一行
+</code></pre><h5 id="3、翻屏"><a href="#3、翻屏" class="headerlink" title="3、翻屏"></a>3、翻屏</h5><pre><code>Ctrl+f: 向下翻一屏
+
+Ctrl+b: 向上翻一屏
+
+Ctrl+d: 向下翻半屏
+
+Ctrl+u: 向上翻半屏
+</code></pre><h4 id="四、撤消编辑操作-u"><a href="#四、撤消编辑操作-u" class="headerlink" title="四、撤消编辑操作 u"></a>四、撤消编辑操作 u</h4><p>  u：撤消前一次的编辑操作</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-动态添加表格添加数据" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -1265,64 +1378,6 @@
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tips/">tips</a></li></ul>
     </div>
 
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/04/10/hello-world/" class="article-date">
-      <time datetime="2017-04-10T09:39:54.000Z" itemprop="datePublished">2017-04-10</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/10/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
       
       <div class="clearfix"></div>
     </div>

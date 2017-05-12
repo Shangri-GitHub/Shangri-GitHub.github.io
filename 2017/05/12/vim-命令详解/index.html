@@ -15,15 +15,17 @@
 
 
 
-<meta name="description" content="nice to meet you">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Shangri-La">
-<meta property="og:url" content="http://yoursite.com/archives/2017/index.html">
+<meta name="description" content="vim 命令详解 一、模式切换#####编辑–&amp;gt;输入：  i: 在当前光标所在字符的前面，转为输入模式；  a: 在当前光标所在字符的后面，转为输入模式；  o: 在当前光标所在行的下方，新建一行，并转为输入模式；  I：在当前光标所在行的行首，转换为输入模式  A：在当前光标所在行的行尾，转换为输入模式  O：在当前光标所在行的上方，新建一行，并转为输入模式； 输入–&amp;gt;编辑： ES">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vim 命令详解">
+<meta property="og:url" content="http://yoursite.com/2017/05/12/vim-命令详解/index.html">
 <meta property="og:site_name" content="Shangri-La">
-<meta property="og:description" content="nice to meet you">
+<meta property="og:description" content="vim 命令详解 一、模式切换#####编辑–&amp;gt;输入：  i: 在当前光标所在字符的前面，转为输入模式；  a: 在当前光标所在字符的后面，转为输入模式；  o: 在当前光标所在行的下方，新建一行，并转为输入模式；  I：在当前光标所在行的行首，转换为输入模式  A：在当前光标所在行的行尾，转换为输入模式  O：在当前光标所在行的上方，新建一行，并转为输入模式； 输入–&amp;gt;编辑： ES">
+<meta property="og:updated_time" content="2017-05-12T09:38:10.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Shangri-La">
-<meta name="twitter:description" content="nice to meet you">
+<meta name="twitter:title" content="vim 命令详解">
+<meta name="twitter:description" content="vim 命令详解 一、模式切换#####编辑–&amp;gt;输入：  i: 在当前光标所在字符的前面，转为输入模式；  a: 在当前光标所在字符的后面，转为输入模式；  o: 在当前光标所在行的下方，新建一行，并转为输入模式；  I：在当前光标所在行的行首，转换为输入模式  A：在当前光标所在行的行尾，转换为输入模式  O：在当前光标所在行的上方，新建一行，并转为输入模式； 输入–&amp;gt;编辑： ES">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -55,7 +57,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Archives: 2017 | Shangri-La</title>
+<title>vim 命令详解 | Shangri-La</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -65,8 +67,8 @@
         fancybox: true,
         animate: true,
         isHome: false,
-        isPost: false,
-        isArchive: true,
+        isPost: true,
+        isArchive: false,
         isTag: false,
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
@@ -278,325 +280,217 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-vim-命令详解" class="article article-type-post" itemscope itemprop="blogPost">
   
+    <div class="article-meta">
+      <a href="/2017/05/12/vim-命令详解/" class="article-date">
+      <time datetime="2017-05-12T09:30:32.000Z" itemprop="datePublished">2017-05-12</time>
+</a>
+
+
+    </div>
   
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      vim 命令详解
+    </h1>
+  
+
+      </header>
       
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/05/12/vim-命令详解/" class="archive-article-date">
-      <time datetime="2017-05-12T09:30:32.000Z" itemprop="datePublished">05-12</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/12/vim-命令详解/">vim 命令详解</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
+    <div class="article-entry" itemprop="articleBody">
+      
           
+        <blockquote>
+<p>vim 命令详解</p>
+<h4 id="一、模式切换"><a href="#一、模式切换" class="headerlink" title="一、模式切换"></a>一、模式切换</h4><p>#####编辑–&gt;输入：</p>
+</blockquote>
+<pre><code>i: 在当前光标所在字符的前面，转为输入模式；
 
-          
-        </div>
-        <div class="clearfix"></div>
-    </header>
+a: 在当前光标所在字符的后面，转为输入模式；
+
+o: 在当前光标所在行的下方，新建一行，并转为输入模式；
+
+I：在当前光标所在行的行首，转换为输入模式
+
+A：在当前光标所在行的行尾，转换为输入模式
+
+O：在当前光标所在行的上方，新建一行，并转为输入模式；
+</code></pre><p>输入–&gt;编辑：</p>
+<pre><code>ESC
+</code></pre><p>编辑–&gt;末行：</p>
+<pre><code>:
+</code></pre><p>末行–&gt;编辑：</p>
+<pre><code>ESC, ESC
+</code></pre><p>####二、关闭文件</p>
+<p>#####1、末行模式关闭文件</p>
+<pre><code>:q  退出
+
+:wq 保存并退出
+
+:q! 不保存并退出
+
+:w 保存
+
+:w! 强行保存
+
+:wq --&gt; :x
+</code></pre><p>#####2、编辑模式下退出</p>
+<p>ZZ: </p>
+<h4 id="三、移动光标-编辑模式"><a href="#三、移动光标-编辑模式" class="headerlink" title="三、移动光标(编辑模式)"></a>三、移动光标(编辑模式)</h4><h5 id="1、逐字符移动："><a href="#1、逐字符移动：" class="headerlink" title="1、逐字符移动："></a>1、逐字符移动：</h5><pre><code>h: 左
+
+l: 右
+
+j: 下
+
+k: 上
+
+#h: 移动#个字符
+</code></pre><h5 id="2、行间跳转"><a href="#2、行间跳转" class="headerlink" title="2、行间跳转"></a>2、行间跳转</h5><pre><code>#G：跳转至第#行
+
+gg: 第一行
+
+G：最后一行
+</code></pre><h5 id="3、翻屏"><a href="#3、翻屏" class="headerlink" title="3、翻屏"></a>3、翻屏</h5><pre><code>Ctrl+f: 向下翻一屏
+
+Ctrl+b: 向上翻一屏
+
+Ctrl+d: 向下翻半屏
+
+Ctrl+u: 向上翻半屏
+</code></pre><h4 id="四、撤消编辑操作-u"><a href="#四、撤消编辑操作-u" class="headerlink" title="四、撤消编辑操作 u"></a>四、撤消编辑操作 u</h4><p>  u：撤消前一次的编辑操作</p>
+
+      
+    </div>
+    
   </div>
-</article>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/04/26/动态添加表格添加数据/" class="archive-article-date">
-      <time datetime="2017-04-26T14:08:41.000Z" itemprop="datePublished">04-26</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/26/动态添加表格添加数据/">动态添加表格添加数据</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/04/24/人防大数据平台/" class="archive-article-date">
-      <time datetime="2017-04-24T10:06:28.000Z" itemprop="datePublished">04-24</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/24/人防大数据平台/">人防大数据平台</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/04/24/js一些技巧/" class="archive-article-date">
-      <time datetime="2017-04-24T08:23:29.000Z" itemprop="datePublished">04-24</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/24/js一些技巧/">js一些技巧</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/04/23/浏览器的一些方法/" class="archive-article-date">
-      <time datetime="2017-04-23T06:02:14.000Z" itemprop="datePublished">04-23</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/23/浏览器的一些方法/">浏览器的方法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/04/19/前端规范/" class="archive-article-date">
-      <time datetime="2017-04-19T05:55:53.000Z" itemprop="datePublished">04-19</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/19/前端规范/">前端规范</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/04/18/下拉刷新/" class="archive-article-date">
-      <time datetime="2017-04-18T11:32:37.000Z" itemprop="datePublished">04-18</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/18/下拉刷新/">下拉刷新</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/04/18/weChat/" class="archive-article-date">
-      <time datetime="2017-04-18T03:01:44.000Z" itemprop="datePublished">04-18</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/18/weChat/">weChat</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/04/14/正则表达式/" class="archive-article-date">
-      <time datetime="2017-04-14T05:46:21.000Z" itemprop="datePublished">04-14</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/14/正则表达式/">《最常用的正则表达式》</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/正则/">正则</a></li></ul>
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2017/05/12/vim-命令详解/">vim 命令详解</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">韩星</a></p>
+        <p><span>发布时间:</span>2017-05-12, 17:30:32</p>
+        <p><span>最后更新:</span>2017-05-12, 17:38:10</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2017/05/12/vim-命令详解/" title="vim 命令详解">http://yoursite.com/2017/05/12/vim-命令详解/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/05/12/vim-命令详解/　　作者: 韩星" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
     </div>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/04/11/test/" class="archive-article-date">
-      <time datetime="2017-04-11T13:29:27.000Z" itemprop="datePublished">04-11</time>
-</a>
 
 
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/04/11/test/">markdown用法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tips/">tips</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2017/page/2/">2</a><a class="extend next" rel="next" href="/archives/2017/page/2/">Next &raquo;</a>
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2017/04/26/动态添加表格添加数据/">
+                    动态添加表格添加数据
+                </a>
+            </div>
+        
+        
     </nav>
-  
 
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#一、模式切换"><span class="toc-number">1.</span> <span class="toc-text">一、模式切换</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#三、移动光标-编辑模式"><span class="toc-number">2.</span> <span class="toc-text">三、移动光标(编辑模式)</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1、逐字符移动："><span class="toc-number">2.1.</span> <span class="toc-text">1、逐字符移动：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2、行间跳转"><span class="toc-number">2.2.</span> <span class="toc-text">2、行间跳转</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3、翻屏"><span class="toc-number">2.3.</span> <span class="toc-text">3、翻屏</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#四、撤消编辑操作-u"><span class="toc-number">3.</span> <span class="toc-text">四、撤消编辑操作 u</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"vim 命令详解　| Shangri-La　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2017/04/26/动态添加表格添加数据/" title="上一篇: 动态添加表格添加数据">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/05/12/vim-命令详解/">vim 命令详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/26/动态添加表格添加数据/">动态添加表格添加数据</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/24/人防大数据平台/">人防大数据平台</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/24/js一些技巧/">js一些技巧</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/23/浏览器的一些方法/">浏览器的方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/19/前端规范/">前端规范</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/18/下拉刷新/">下拉刷新</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/18/weChat/">weChat</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/14/正则表达式/">《最常用的正则表达式》</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/11/test/">markdown用法</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/10/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/10/photo/">我的相册</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">
