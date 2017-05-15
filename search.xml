@@ -3,6 +3,20 @@
   
     
     <entry>
+      <title><![CDATA[IntelliJ Idea 免费激活方法]]></title>
+      <url>/2017/05/15/IntelliJ-Idea/</url>
+      <content type="html"><![CDATA[<ol>
+<li>到网站 <a href="http://idea.lanyus.com/" target="_blank" rel="external">http://idea.lanyus.com/</a> 获取注册码。</li>
+</ol>
+<p>2.填入下面的license server:</p>
+<p>　　<a href="http://intellij.mandroid.cn/" target="_blank" rel="external">http://intellij.mandroid.cn/</a><br>　　<a href="http://idea.imsxm.com/" target="_blank" rel="external">http://idea.imsxm.com/</a><br>　　<a href="http://idea.iteblog.com/key.php" target="_blank" rel="external">http://idea.iteblog.com/key.php</a></p>
+<p>以上方法验证均可以</p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[vim 命令详解]]></title>
       <url>/2017/05/12/vim-%E5%91%BD%E4%BB%A4%E8%AF%A6%E8%A7%A3/</url>
       <content type="html"><![CDATA[<blockquote>
