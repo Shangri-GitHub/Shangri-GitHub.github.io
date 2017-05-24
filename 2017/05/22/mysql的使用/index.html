@@ -22,7 +22,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/05/22/mysql的使用/index.html">
 <meta property="og:site_name" content="Shangri-La">
 <meta property="og:description" content="mysql的使用  设置alias的路径1.vim ~/.               打开隐藏文件2.找到.zshrc文件2.alias mysql=/usr/local/mysql/bin/mysql； Macbook Pro 安装及卸载mysql教程http://www.th7.cn/db/mysql/201504/101743.shtml   mysql的教程http://blog.cs">
-<meta property="og:updated_time" content="2017-05-22T09:49:10.000Z">
+<meta property="og:updated_time" content="2017-05-24T08:50:43.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mysql的使用">
 <meta name="twitter:description" content="mysql的使用  设置alias的路径1.vim ~/.               打开隐藏文件2.找到.zshrc文件2.alias mysql=/usr/local/mysql/bin/mysql； Macbook Pro 安装及卸载mysql教程http://www.th7.cn/db/mysql/201504/101743.shtml   mysql的教程http://blog.cs">
@@ -322,8 +322,9 @@
 <h5 id="设置alias的路径"><a href="#设置alias的路径" class="headerlink" title="设置alias的路径"></a>设置alias的路径</h5><p>1.vim ~/.               打开隐藏文件<br>2.找到.zshrc文件<br>2.alias mysql=/usr/local/mysql/bin/mysql；</p>
 <h5 id="Macbook-Pro-安装及卸载mysql教程"><a href="#Macbook-Pro-安装及卸载mysql教程" class="headerlink" title="Macbook Pro 安装及卸载mysql教程"></a>Macbook Pro 安装及卸载mysql教程</h5><p><a href="http://www.th7.cn/db/mysql/201504/101743.shtml" target="_blank" rel="external">http://www.th7.cn/db/mysql/201504/101743.shtml</a>   mysql的教程<br><a href="http://blog.csdn.net/yanqinbin/article/details/50442676" target="_blank" rel="external">http://blog.csdn.net/yanqinbin/article/details/50442676</a><br>1.<a href="http://dev.mysql.com/downloads/mysql/" target="_blank" rel="external">http://dev.mysql.com/downloads/mysql/</a><br>  <a href="http://dev.mysql.com/downloads/workbench/" target="_blank" rel="external">http://dev.mysql.com/downloads/workbench/</a></p>
 <ol>
-<li>cd /usr/local/mysql/bin/<br>3.回车后 登录管理员权限  sudo su<br>4.回车后输入以下命令来禁止mysql验证功    ./mysqld_safe –skip-grant-tables &amp;<br>5.输入 alias 命令   alias mysql=/usr/local/mysql/bin/mysql<br>#如果是登录远程主机上的mysql数据库 mysql -h 主机地址 -u 用户名 -p 用户密码<br>sudo apt-get install mysql-workbench   安装mysql<br>create database Company default char set utf8 collate utf8_general_ci;; 第一步： 创建中文输入<br>create table(<br>id:<br>)charset = utf8    另一种创建中文的方法<br>drop database MYdb;  删除数据<br>select  name , gender from stduent<br>[where gender = “男” and sorce &lt;= 70]<br>[limit 0 offset 4 ]   limit 选择下标  offset 选择几项<br>update student set phone=’13411112222’,english_score=90 where name=’韩梅梅’;    //更新数据<br>delete from student where id=3;         //删除第3行<br>select <em> from student where phone like ‘1%’;  取电话开头市1的所有电话<br>distinct  把重复的合并成打第一个;<br>select avg(age) from school.student;   求平均数<br>select count(distinct name) from school.student;  （去掉重名的行数<br>max（） min（）sum（）  最大 最小函数  求和<br>select mid(name,1,2) from school.student;  从姓名中第一位开始取两个。<br>select length(name),name from school.student;   姓名的长度   注：1个文字占三个字节<br>select now();  当前的时间<br>order by age desc/asc;  排序 降序 升序;<br>where and/or  不能是聚合函数  having and/or   可以是聚合函数;<br>（select age from student） 子查询语法<br>黑窗户命令<br>mysql -u root -p<br>show databases;<br>create database Company default char set utf8 collate utf8_general_ci;; 第一步： 创建中文输入<br>use Company;<br>查询1-5条数据<br>select </em> from news where 1=1 limit 0,5;</li>
+<li>cd /usr/local/mysql/bin/<br>3.回车后 登录管理员权限  sudo su<br>4.回车后输入以下命令来禁止mysql验证功    ./mysqld_safe –skip-grant-tables &amp;<br>5.输入 alias 命令   alias mysql=/usr/local/mysql/bin/mysql<br>#如果是登录远程主机上的mysql数据库 mysql -h 主机地址 -u 用户名 -p 用户密码<br>sudo apt-get install mysql-workbench   安装mysql<br>create database Company default char set utf8 collate utf8_general_ci;; 第一步： 创建中文输入<br>use mysqlTest           // 使用库名<br>create table students   // 创建表的名字<br>(<br>Id_P int NOT NULL auto_increment,<br>LastName varchar(255) NOT NULL,<br>FirstName varchar(255),<br>Address varchar(255),<br>City varchar(255),<br>PRIMARY KEY (Id_P)<br>)charset = utf8 </li>
 </ol>
+<p>drop database MYdb;  删除数据<br>select  name , gender from stduent<br>[where gender = “男” and sorce &lt;= 70]<br>[limit 0 offset 4 ]   limit 选择下标  offset 选择几项<br>update student set phone=’13411112222’,english_score=90 where name=’韩梅梅’;    //更新数据<br>delete from student where id=3;         //删除第3行<br>select <em> from student where phone like ‘1%’;  取电话开头市1的所有电话<br>distinct  把重复的合并成打第一个;<br>select avg(age) from school.student;   求平均数<br>select count(distinct name) from school.student;  （去掉重名的行数<br>max（） min（）sum（）  最大 最小函数  求和<br>select mid(name,1,2) from school.student;  从姓名中第一位开始取两个。<br>select length(name),name from school.student;   姓名的长度   注：1个文字占三个字节<br>select now();  当前的时间<br>order by age desc/asc;  排序 降序 升序;<br>where and/or  不能是聚合函数  having and/or   可以是聚合函数;<br>（select age from student） 子查询语法<br>黑窗户命令<br>mysql -u root -p<br>show databases;<br>create database Company default char set utf8 collate utf8_general_ci;; 第一步： 创建中文输入<br>use Company;<br>查询1-5条数据<br>select </em> from news where 1=1 limit 0,5;</p>
 <h5 id="unbuntu下载"><a href="#unbuntu下载" class="headerlink" title="unbuntu下载"></a>unbuntu下载</h5><ol>
 <li>w 查看登陆信息</li>
 <li>apt-cache search mysql-server<br>3.sudo apt-get install mysql-server-5.6<br>4.ps -ef|grep mysqld      //查看mysql的进程<br>5.sudo /etc/init.d/mysql start/stop/restart status       //查看mysql的状态<br>6.mysql -h127.0.0.1 -p3306 -uroot -p   ||    mysql -S/tmp/mysql.sock -uroot -p               // 连接到服务器(服务器和本机)</li>
@@ -342,7 +343,7 @@
         <p><span>本文标题:</span><a href="/2017/05/22/mysql的使用/">mysql的使用</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">韩星</a></p>
         <p><span>发布时间:</span>2017-05-22, 17:38:45</p>
-        <p><span>最后更新:</span>2017-05-22, 17:49:10</p>
+        <p><span>最后更新:</span>2017-05-24, 16:50:43</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2017/05/22/mysql的使用/" title="mysql的使用">http://yoursite.com/2017/05/22/mysql的使用/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/05/22/mysql的使用/　　作者: 韩星" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -363,6 +364,12 @@
                 </a>
             </div>
         
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2017/05/24/github生成密钥/">
+                    github生成密钥
+                </a>
+            </div>
         
     </nav>
 
@@ -436,11 +443,13 @@
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2017/05/24/github生成密钥/" title="下一篇: github生成密钥">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/05/22/mysql的使用/">mysql的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/15/IntelliJ-Idea/">IntelliJ Idea 免费激活方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/12/vim-命令详解/">vim 命令详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/26/动态添加表格添加数据/">动态添加表格添加数据</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/24/人防大数据平台/">人防大数据平台</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/24/js一些技巧/">js一些技巧</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/23/浏览器的一些方法/">浏览器的方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/19/前端规范/">前端规范</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/18/下拉刷新/">下拉刷新</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/18/weChat/">weChat</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/14/正则表达式/">《最常用的正则表达式》</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/11/test/">markdown用法</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/10/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/10/photo/">我的相册</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/05/24/github生成密钥/">github生成密钥</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/22/mysql的使用/">mysql的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/15/IntelliJ-Idea/">IntelliJ Idea 免费激活方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/05/12/vim-命令详解/">vim 命令详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/26/动态添加表格添加数据/">动态添加表格添加数据</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/24/人防大数据平台/">人防大数据平台</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/24/js一些技巧/">js一些技巧</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/23/浏览器的一些方法/">浏览器的方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/19/前端规范/">前端规范</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/18/下拉刷新/">下拉刷新</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/18/weChat/">weChat</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/14/正则表达式/">《最常用的正则表达式》</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/11/test/">markdown用法</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/10/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/10/photo/">我的相册</a></li></ul>
 
 
 

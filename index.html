@@ -285,6 +285,61 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-github生成密钥" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/05/24/github生成密钥/" class="article-date">
+      <time datetime="2017-05-24T05:29:27.000Z" itemprop="datePublished">2017-05-24</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/05/24/github生成密钥/">github生成密钥</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">$ ssh-keygen -t rsa -b 4096 -C <span class="string">"your_email@example.com"</span></div><div class="line">$ vi .ssh/id_rsa.pub     查看自己的公钥</div></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-mysql的使用" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -320,8 +375,9 @@
 <h5 id="设置alias的路径"><a href="#设置alias的路径" class="headerlink" title="设置alias的路径"></a>设置alias的路径</h5><p>1.vim ~/.               打开隐藏文件<br>2.找到.zshrc文件<br>2.alias mysql=/usr/local/mysql/bin/mysql；</p>
 <h5 id="Macbook-Pro-安装及卸载mysql教程"><a href="#Macbook-Pro-安装及卸载mysql教程" class="headerlink" title="Macbook Pro 安装及卸载mysql教程"></a>Macbook Pro 安装及卸载mysql教程</h5><p><a href="http://www.th7.cn/db/mysql/201504/101743.shtml" target="_blank" rel="external">http://www.th7.cn/db/mysql/201504/101743.shtml</a>   mysql的教程<br><a href="http://blog.csdn.net/yanqinbin/article/details/50442676" target="_blank" rel="external">http://blog.csdn.net/yanqinbin/article/details/50442676</a><br>1.<a href="http://dev.mysql.com/downloads/mysql/" target="_blank" rel="external">http://dev.mysql.com/downloads/mysql/</a><br>  <a href="http://dev.mysql.com/downloads/workbench/" target="_blank" rel="external">http://dev.mysql.com/downloads/workbench/</a></p>
 <ol>
-<li>cd /usr/local/mysql/bin/<br>3.回车后 登录管理员权限  sudo su<br>4.回车后输入以下命令来禁止mysql验证功    ./mysqld_safe –skip-grant-tables &amp;<br>5.输入 alias 命令   alias mysql=/usr/local/mysql/bin/mysql<br>#如果是登录远程主机上的mysql数据库 mysql -h 主机地址 -u 用户名 -p 用户密码<br>sudo apt-get install mysql-workbench   安装mysql<br>create database Company default char set utf8 collate utf8_general_ci;; 第一步： 创建中文输入<br>create table(<br>id:<br>)charset = utf8    另一种创建中文的方法<br>drop database MYdb;  删除数据<br>select  name , gender from stduent<br>[where gender = “男” and sorce &lt;= 70]<br>[limit 0 offset 4 ]   limit 选择下标  offset 选择几项<br>update student set phone=’13411112222’,english_score=90 where name=’韩梅梅’;    //更新数据<br>delete from student where id=3;         //删除第3行<br>select <em> from student where phone like ‘1%’;  取电话开头市1的所有电话<br>distinct  把重复的合并成打第一个;<br>select avg(age) from school.student;   求平均数<br>select count(distinct name) from school.student;  （去掉重名的行数<br>max（） min（）sum（）  最大 最小函数  求和<br>select mid(name,1,2) from school.student;  从姓名中第一位开始取两个。<br>select length(name),name from school.student;   姓名的长度   注：1个文字占三个字节<br>select now();  当前的时间<br>order by age desc/asc;  排序 降序 升序;<br>where and/or  不能是聚合函数  having and/or   可以是聚合函数;<br>（select age from student） 子查询语法<br>黑窗户命令<br>mysql -u root -p<br>show databases;<br>create database Company default char set utf8 collate utf8_general_ci;; 第一步： 创建中文输入<br>use Company;<br>查询1-5条数据<br>select </em> from news where 1=1 limit 0,5;</li>
+<li>cd /usr/local/mysql/bin/<br>3.回车后 登录管理员权限  sudo su<br>4.回车后输入以下命令来禁止mysql验证功    ./mysqld_safe –skip-grant-tables &amp;<br>5.输入 alias 命令   alias mysql=/usr/local/mysql/bin/mysql<br>#如果是登录远程主机上的mysql数据库 mysql -h 主机地址 -u 用户名 -p 用户密码<br>sudo apt-get install mysql-workbench   安装mysql<br>create database Company default char set utf8 collate utf8_general_ci;; 第一步： 创建中文输入<br>use mysqlTest           // 使用库名<br>create table students   // 创建表的名字<br>(<br>Id_P int NOT NULL auto_increment,<br>LastName varchar(255) NOT NULL,<br>FirstName varchar(255),<br>Address varchar(255),<br>City varchar(255),<br>PRIMARY KEY (Id_P)<br>)charset = utf8 </li>
 </ol>
+<p>drop database MYdb;  删除数据<br>select  name , gender from stduent<br>[where gender = “男” and sorce &lt;= 70]<br>[limit 0 offset 4 ]   limit 选择下标  offset 选择几项<br>update student set phone=’13411112222’,english_score=90 where name=’韩梅梅’;    //更新数据<br>delete from student where id=3;         //删除第3行<br>select <em> from student where phone like ‘1%’;  取电话开头市1的所有电话<br>distinct  把重复的合并成打第一个;<br>select avg(age) from school.student;   求平均数<br>select count(distinct name) from school.student;  （去掉重名的行数<br>max（） min（）sum（）  最大 最小函数  求和<br>select mid(name,1,2) from school.student;  从姓名中第一位开始取两个。<br>select length(name),name from school.student;   姓名的长度   注：1个文字占三个字节<br>select now();  当前的时间<br>order by age desc/asc;  排序 降序 升序;<br>where and/or  不能是聚合函数  having and/or   可以是聚合函数;<br>（select age from student） 子查询语法<br>黑窗户命令<br>mysql -u root -p<br>show databases;<br>create database Company default char set utf8 collate utf8_general_ci;; 第一步： 创建中文输入<br>use Company;<br>查询1-5条数据<br>select </em> from news where 1=1 limit 0,5;</p>
 <h5 id="unbuntu下载"><a href="#unbuntu下载" class="headerlink" title="unbuntu下载"></a>unbuntu下载</h5><ol>
 <li>w 查看登陆信息</li>
 <li>apt-cache search mysql-server<br>3.sudo apt-get install mysql-server-5.6<br>4.ps -ef|grep mysqld      //查看mysql的进程<br>5.sudo /etc/init.d/mysql start/stop/restart status       //查看mysql的状态<br>6.mysql -h127.0.0.1 -p3306 -uroot -p   ||    mysql -S/tmp/mysql.sock -uroot -p               // 连接到服务器(服务器和本机)</li>
@@ -1211,63 +1267,6 @@ Ctrl+u: 向上翻半屏
       
           
         <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang="en"&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset="UTF-8"&gt;</div><div class="line">    &lt;title&gt;Title&lt;/title&gt;</div><div class="line">    &lt;script src="bower_components/jquery/dist/jquery.min.js"&gt;&lt;/script&gt;</div><div class="line">    &lt;script src="plugins/dropload-gh-pages/dist/dropload.min.js"&gt;&lt;/script&gt;</div><div class="line">    &lt;link rel="stylesheet" href="plugins/dropload-gh-pages/dist/dropload.css"&gt;</div><div class="line">    &lt;script src="plugins/jquery.tmpl.min.js"&gt;&lt;/script&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">&lt;div class="content"&gt;</div><div class="line">    &lt;ul id="movieList"&gt;&lt;/ul&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">&lt;!--列表模板--&gt;</div><div class="line">&lt;script id="movieTemplate" type="text/x-jquery-tmpl"&gt;</div><div class="line">	&lt;li&gt;</div><div class="line">		&lt;b&gt;$&#123;date&#125;&lt;/b&gt;</div><div class="line">		&lt;b&gt;$&#123;pic&#125;&lt;/b&gt;</div><div class="line">		&lt;b&gt;$&#123;title&#125;&lt;/b&gt;</div><div class="line">	&lt;/li&gt;</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">    $(function () &#123;</div><div class="line">        // 页数</div><div class="line">        var page = 0;</div><div class="line">        // 每页展示5个</div><div class="line">        var size = 5;</div><div class="line"></div><div class="line">        // dropload</div><div class="line">        $('.content').dropload(&#123;</div><div class="line">            scrollArea: window,</div><div class="line">            loadDownFn: function (me) &#123;</div><div class="line">                page++;</div><div class="line">                // 拼接HTML</div><div class="line">                var result = '';</div><div class="line">                $.ajax(&#123;</div><div class="line">                    type: 'GET',</div><div class="line">                    url: 'http://ons.me/tools/dropload/json.php?page='+page+'&amp;size='+size,</div><div class="line">//                    url: rootPath + '/scmgnt/op/list/all?page=' + page + '&amp;rows=' + size,</div><div class="line">                    dataType: 'json',</div><div class="line">                    xhrFields: &#123;withCredentials: true&#125;,</div><div class="line">                    crossDomain: true,</div><div class="line">                    success: function (data) &#123;</div><div class="line">                        console.log(data);</div><div class="line">                        var arrLen = data.length;</div><div class="line">                        if (arrLen &gt; 0) &#123;</div><div class="line"></div><div class="line">                        &#125; else &#123;</div><div class="line">                            // 锁定</div><div class="line">                            me.lock();</div><div class="line">                            // 无数据</div><div class="line">                            me.noData();</div><div class="line">                        &#125;</div><div class="line">                        // 为了测试，延迟1秒加载</div><div class="line">                        setTimeout(function () &#123;</div><div class="line">                            // 插入数据到页面，放到最后面</div><div class="line">                            $("#movieTemplate").tmpl(data).appendTo("#movieList");</div><div class="line"></div><div class="line">//                            $('.lists').append(result);</div><div class="line">                            // 每次数据插入，必须重置</div><div class="line">                            me.resetload();</div><div class="line">                        &#125;, 1000);</div><div class="line">                    &#125;,</div><div class="line">                    error: function (xhr, type) &#123;</div><div class="line">                        alert('Ajax error!');</div><div class="line">                        // 即使加载出错，也得重置</div><div class="line">                        me.resetload();</div><div class="line">                    &#125;</div><div class="line">                &#125;);</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line">    &#125;);</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-weChat" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/04/18/weChat/" class="article-date">
-      <time datetime="2017-04-18T03:01:44.000Z" itemprop="datePublished">2017-04-18</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/18/weChat/">weChat</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h5 id="统一使用微信的插件"><a href="#统一使用微信的插件" class="headerlink" title="统一使用微信的插件"></a>统一使用微信的插件</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">// 加载转圈</span></div><div class="line"><span class="keyword">var</span> loading = weui.loading(<span class="string">'加载中...'</span>);</div><div class="line"><span class="comment">// 加载消失</span></div><div class="line">loading.hide</div><div class="line"></div><div class="line"><span class="comment">// 自身的提示框(上面有对号图标)</span></div><div class="line"> weui.toast(<span class="string">'操作成功'</span>, <span class="number">2000</span>)</div><div class="line"></div><div class="line"><span class="comment">// 自定义的toast提示框（只有文字提示）</span></div><div class="line"> weui.toast(<span class="string">'系统异常，请稍后再试！'</span>, &#123;</div><div class="line">     <span class="attr">className</span>: <span class="string">'toast'</span>,</div><div class="line">     <span class="attr">duration</span>: <span class="number">2000</span>,</div><div class="line"> &#125;);</div></pre></td></tr></table></figure>
-<h5 id="下拉刷新-dropload插件"><a href="#下拉刷新-dropload插件" class="headerlink" title="下拉刷新 (dropload插件)"></a>下拉刷新 (<a href="https://github.com/ximan/dropload" target="_blank" rel="external">dropload插件</a>)</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">httprequest</span>(<span class="params">code,name,me</span>)</span>&#123;</div><div class="line">    <span class="comment">// 拼接HTML //调用列表接口</span></div><div class="line">	HttpUtils.get(API.listAll,&#123;<span class="attr">page</span>:page,<span class="attr">rows</span>:size,<span class="attr">loginCode</span>:code,</div><div class="line">			<span class="attr">opName</span>:name&#125;,<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</div><div class="line">		<span class="keyword">var</span> arrLen = data.rows.length;</div><div class="line">		page++;</div><div class="line">		<span class="keyword">if</span>(arrLen &lt; size)&#123;</div><div class="line">			<span class="comment">// 锁定</span></div><div class="line">			me.lock();</div><div class="line">			<span class="comment">// 无数据</span></div><div class="line">			me.noData();</div><div class="line">		&#125;</div><div class="line">		<span class="comment">// 为了测试，延迟1秒加载</span></div><div class="line">		$(<span class="string">"#movieTemplate"</span>).tmpl(data.rows).appendTo(<span class="string">"#content"</span>);</div><div class="line">		me.resetload();</div><div class="line">	&#125;,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		<span class="comment">//alert('Ajax error!');</span></div><div class="line">		<span class="comment">// 即使加载出错，也得重置</span></div><div class="line">		<span class="comment">//me.resetload();</span></div><div class="line">		weui.toast(<span class="string">'系统异常，请稍后再试！'</span>, &#123;</div><div class="line">			<span class="attr">className</span>: <span class="string">'toast'</span>,</div><div class="line">			<span class="attr">duration</span>: <span class="number">2000</span>,</div><div class="line">		&#125;);</div><div class="line">     &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h5 id="tab页的横向滚动-iscroll插件详情"><a href="#tab页的横向滚动-iscroll插件详情" class="headerlink" title="tab页的横向滚动 iscroll插件详情"></a>tab页的横向滚动 <a href="https://github.com/cubiq/iscroll" target="_blank" rel="external">iscroll插件详情</a></h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">// preventDefault: true,</span></div><div class="line">preventDefault: <span class="literal">false</span>,<span class="comment">//（把这句加上去哦）</span></div><div class="line">preventDefaultException: &#123; <span class="attr">tagName</span>: <span class="regexp">/^(INPUT|TEXTAREA|BUTTON|SELECT|A)$/</span> &#125;,  <span class="comment">//（这个后面加|A,因为iscroll阻止了A的默认事件）</span></div><div class="line"><span class="comment">// tab 滚动</span></div><div class="line"><span class="keyword">var</span> myscroll;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">loaded</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        myscroll = <span class="keyword">new</span> IScroll(<span class="string">'#tabs'</span>, &#123;</div><div class="line">            <span class="attr">scrollX</span>: <span class="literal">true</span>,</div><div class="line">            <span class="attr">scrollY</span>: <span class="literal">false</span>,</div><div class="line">            <span class="attr">click</span>: <span class="literal">true</span></div><div class="line">        &#125;)</div><div class="line">    &#125;, <span class="number">100</span>)</div><div class="line">&#125;</div><div class="line"><span class="built_in">window</span>.addEventListener(<span class="string">'load'</span>, loaded, <span class="literal">false</span>)</div></pre></td></tr></table></figure>
       
     </div>
     

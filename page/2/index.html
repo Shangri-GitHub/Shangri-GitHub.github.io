@@ -285,6 +285,63 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-weChat" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/04/18/weChat/" class="article-date">
+      <time datetime="2017-04-18T03:01:44.000Z" itemprop="datePublished">2017-04-18</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/18/weChat/">weChat</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h5 id="统一使用微信的插件"><a href="#统一使用微信的插件" class="headerlink" title="统一使用微信的插件"></a>统一使用微信的插件</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">// 加载转圈</span></div><div class="line"><span class="keyword">var</span> loading = weui.loading(<span class="string">'加载中...'</span>);</div><div class="line"><span class="comment">// 加载消失</span></div><div class="line">loading.hide</div><div class="line"></div><div class="line"><span class="comment">// 自身的提示框(上面有对号图标)</span></div><div class="line"> weui.toast(<span class="string">'操作成功'</span>, <span class="number">2000</span>)</div><div class="line"></div><div class="line"><span class="comment">// 自定义的toast提示框（只有文字提示）</span></div><div class="line"> weui.toast(<span class="string">'系统异常，请稍后再试！'</span>, &#123;</div><div class="line">     <span class="attr">className</span>: <span class="string">'toast'</span>,</div><div class="line">     <span class="attr">duration</span>: <span class="number">2000</span>,</div><div class="line"> &#125;);</div></pre></td></tr></table></figure>
+<h5 id="下拉刷新-dropload插件"><a href="#下拉刷新-dropload插件" class="headerlink" title="下拉刷新 (dropload插件)"></a>下拉刷新 (<a href="https://github.com/ximan/dropload" target="_blank" rel="external">dropload插件</a>)</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">httprequest</span>(<span class="params">code,name,me</span>)</span>&#123;</div><div class="line">    <span class="comment">// 拼接HTML //调用列表接口</span></div><div class="line">	HttpUtils.get(API.listAll,&#123;<span class="attr">page</span>:page,<span class="attr">rows</span>:size,<span class="attr">loginCode</span>:code,</div><div class="line">			<span class="attr">opName</span>:name&#125;,<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</div><div class="line">		<span class="keyword">var</span> arrLen = data.rows.length;</div><div class="line">		page++;</div><div class="line">		<span class="keyword">if</span>(arrLen &lt; size)&#123;</div><div class="line">			<span class="comment">// 锁定</span></div><div class="line">			me.lock();</div><div class="line">			<span class="comment">// 无数据</span></div><div class="line">			me.noData();</div><div class="line">		&#125;</div><div class="line">		<span class="comment">// 为了测试，延迟1秒加载</span></div><div class="line">		$(<span class="string">"#movieTemplate"</span>).tmpl(data.rows).appendTo(<span class="string">"#content"</span>);</div><div class="line">		me.resetload();</div><div class="line">	&#125;,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		<span class="comment">//alert('Ajax error!');</span></div><div class="line">		<span class="comment">// 即使加载出错，也得重置</span></div><div class="line">		<span class="comment">//me.resetload();</span></div><div class="line">		weui.toast(<span class="string">'系统异常，请稍后再试！'</span>, &#123;</div><div class="line">			<span class="attr">className</span>: <span class="string">'toast'</span>,</div><div class="line">			<span class="attr">duration</span>: <span class="number">2000</span>,</div><div class="line">		&#125;);</div><div class="line">     &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h5 id="tab页的横向滚动-iscroll插件详情"><a href="#tab页的横向滚动-iscroll插件详情" class="headerlink" title="tab页的横向滚动 iscroll插件详情"></a>tab页的横向滚动 <a href="https://github.com/cubiq/iscroll" target="_blank" rel="external">iscroll插件详情</a></h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">// preventDefault: true,</span></div><div class="line">preventDefault: <span class="literal">false</span>,<span class="comment">//（把这句加上去哦）</span></div><div class="line">preventDefaultException: &#123; <span class="attr">tagName</span>: <span class="regexp">/^(INPUT|TEXTAREA|BUTTON|SELECT|A)$/</span> &#125;,  <span class="comment">//（这个后面加|A,因为iscroll阻止了A的默认事件）</span></div><div class="line"><span class="comment">// tab 滚动</span></div><div class="line"><span class="keyword">var</span> myscroll;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">loaded</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        myscroll = <span class="keyword">new</span> IScroll(<span class="string">'#tabs'</span>, &#123;</div><div class="line">            <span class="attr">scrollX</span>: <span class="literal">true</span>,</div><div class="line">            <span class="attr">scrollY</span>: <span class="literal">false</span>,</div><div class="line">            <span class="attr">click</span>: <span class="literal">true</span></div><div class="line">        &#125;)</div><div class="line">    &#125;, <span class="number">100</span>)</div><div class="line">&#125;</div><div class="line"><span class="built_in">window</span>.addEventListener(<span class="string">'load'</span>, loaded, <span class="literal">false</span>)</div></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-正则表达式" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
