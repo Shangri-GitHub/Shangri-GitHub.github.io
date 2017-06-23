@@ -315,12 +315,18 @@
       
           
         <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&quot;hexo-generator-json-content&quot;: &quot;^3.0.1&quot;,  //今天报错待解决</div></pre></td></tr></table></figure>
-<h5 id="配置方法"><a href="#配置方法" class="headerlink" title="配置方法"></a>配置方法</h5><ul>
+<h4 id="配置方法"><a href="#配置方法" class="headerlink" title="配置方法"></a>配置方法</h4><ul>
 <li>第一步： vi .zshrc</li>
 <li>第二步： 将这段文字输入 JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_60.jdk/Contents/Home  </li>
-<li>第三步： 输入source .bash_profile 这样就可以使得环境变量起作用了</li>
+<li>第三步： 输入source .zshrc 这样就可以使得环境变量起作用了</li>
 <li>第四步： echo $JAVA_HOME看看有没有输出刚才配置的路径</li>
 </ul>
+<h4 id="创建一个简单的demo"><a href="#创建一个简单的demo" class="headerlink" title="创建一个简单的demo"></a>创建一个简单的demo</h4><p>一. 打开textEdit软件 设置:preferences &gt; Format &gt; Plain text 创建hello.java文件</p>
+<pre><code><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">hello</span></span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</div><div class="line">        System.out.println(<span class="string">"hello world"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</code></pre><p>二. 找到当前文件目录 注意文件夹名字和类名一致(源程序)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">javac hello.java</div></pre></td></tr></table></figure>
+<p>三. 生成一个hello.class的文件,然后执行（字节码程序）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">java hello</div></pre></td></tr></table></figure>
 
       
     </div>
