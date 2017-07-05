@@ -5,8 +5,7 @@
     <entry>
       <title><![CDATA[Java 学习笔记]]></title>
       <url>/2017/06/23/java%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-      <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&quot;hexo-generator-json-content&quot;: &quot;^3.0.1&quot;,  //今天报错待解决</div></pre></td></tr></table></figure>
-<h4 id="Mac配置java环境"><a href="#Mac配置java环境" class="headerlink" title="Mac配置java环境"></a>Mac配置java环境</h4><ul>
+      <content type="html"><![CDATA[<h4 id="Mac配置java环境"><a href="#Mac配置java环境" class="headerlink" title="Mac配置java环境"></a>Mac配置java环境</h4><ul>
 <li>第一步： vi .zshrc</li>
 <li>第二步： 将这段文字输入 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home<br>export PATH=$JAVA_HOME/bin:$PATH  </li>
 <li>第三步： 输入source .zshrc 这样就可以使得环境变量起作用了</li>
